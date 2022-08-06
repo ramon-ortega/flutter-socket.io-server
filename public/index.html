@@ -27,6 +27,22 @@
         socket.on('mensaje', function(payload){
             console.log("Recibi el mensaje: ", payload);
         });
+
+        // socket.emit('emitir-mensaje', {nombre: 'Ramon', mensaje: 'hola Mundo', mensaje2: 'hola'});
+
+        // socket.on('nuevo-mensaje', function(payload){
+        //     console.log("Recibo el mensaje que debe llegar de flutter", payload);
+        // });
+
+        socket.on('nuevo-mensaje', function(payload){
+            console.log('Escuchando:', payload);
+        });
+
+        socket.on('active-bands', function(payload){
+            console.clear();
+            console.table(payload);
+        });
+
     </script>
 </body>
 </html>
